@@ -1,0 +1,1072 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Japan + Korea Trip | Oct 12-28, 2026</title>
+  <style>
+    @font-face {
+      font-family: "TASA Orbiter";
+      src: url("./assets/fonts/TASAOrbiter-VariableFont_wght.ttf") format("truetype");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #f6efe4;
+      --panel: #ffffff;
+      --ink: #2f2217;
+      --muted: #7a6350;
+      --line: #e7d7c4;
+      --accent: #b66a2c;
+      --accent-soft: #f8e9d9;
+      --japan: #b64a33;
+      --korea: #7b4f8f;
+      --mix: #8f5a42;
+      --shadow: 0 18px 40px rgba(62, 35, 14, 0.1);
+      --font-heading: "TASA Orbiter", "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background:
+        linear-gradient(rgba(248, 241, 231, 0.84), rgba(240, 227, 208, 0.84)),
+        url('./assets/images/leafbackground.jfif') center/cover fixed no-repeat;
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+    }
+
+    .container {
+      width: min(1200px, 94vw);
+      margin: 24px auto 34px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-banner {
+      min-height: 260px;
+      padding: 30px;
+      background:
+        linear-gradient(120deg, rgba(68, 40, 18, 0.72), rgba(123, 66, 28, 0.5)),
+        url('./assets/images/header.png') center/cover no-repeat;
+      color: #fff;
+      display: grid;
+      align-content: end;
+      gap: 10px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 3.4vw, 2.5rem);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: 1rem;
+      max-width: 70ch;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .meta {
+      padding: 16px;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      border-top: 1px solid var(--line);
+    }
+
+    .meta-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 11px 12px;
+      background: #fff;
+      font-size: 0.93rem;
+      color: var(--muted);
+    }
+
+    .meta-card b {
+      color: var(--ink);
+      display: block;
+      margin-bottom: 2px;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .flights {
+      padding: 14px 16px 16px;
+      border-top: 1px solid var(--line);
+      background: #fffaf3;
+      display: grid;
+      gap: 10px;
+    }
+
+    .flights h2 {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--ink);
+    }
+
+    .flights-grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .flight-card {
+      border: 1px solid #e6d0b7;
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: #fff;
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .flight-card b {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--ink);
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .photos {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      padding: 14px;
+    }
+
+    .photos h2 {
+      margin: 2px 6px 12px;
+      font-size: 1.08rem;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 10px;
+    }
+
+    figure {
+      margin: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #f8fbfd;
+    }
+
+    figure img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+    }
+
+    figcaption {
+      padding: 8px 10px;
+      font-size: 0.84rem;
+      color: #000;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+    }
+
+    .planner {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .controls {
+      position: sticky;
+      top: 14px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .controls h3 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .filter-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 9px 12px;
+      font: inherit;
+      font-size: 0.82rem;
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      min-height: 38px;
+    }
+
+    .chip.active {
+      background: var(--accent-soft);
+      border-color: #e0b992;
+      color: #8a4b1a;
+    }
+
+    .btn-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+    }
+
+    .action-btn {
+      border: 1px solid #e5cdb4;
+      background: #fcf3e8;
+      border-radius: 10px;
+      padding: 10px;
+      font: inherit;
+      font-size: 0.84rem;
+      cursor: pointer;
+      min-height: 40px;
+    }
+
+    .count {
+      font-size: 0.83rem;
+      color: var(--muted);
+      padding-top: 3px;
+      border-top: 1px dashed var(--line);
+    }
+
+    .file-tools {
+      display: grid;
+      gap: 7px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--line);
+    }
+
+    .file-status {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .itinerary {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .day {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .day.hidden { display: none; }
+
+    .day-head {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      border: 0;
+      background: #fff;
+      text-align: left;
+      cursor: pointer;
+      padding: 12px;
+      font: inherit;
+      color: inherit;
+    }
+
+    .day-head:hover { background: #fff7ed; }
+
+    .label {
+      display: inline-block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 999px;
+      margin-bottom: 5px;
+      background: var(--accent);
+    }
+
+    .jp .label { background: var(--japan); }
+    .kr .label { background: var(--korea); }
+    .mix .label { background: var(--mix); }
+
+    .day h4 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .date {
+      margin-top: 4px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #2f2217;
+      background: #f9e8d6;
+      border: 1px solid #e6c8a8;
+      border-radius: 999px;
+      display: inline-block;
+      padding: 2px 9px;
+      letter-spacing: 0.01em;
+    }
+
+    .caret {
+      color: #4a2f1a;
+      transition: transform 0.2s ease;
+      font-size: 1.15rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      border: 1px solid #e1c2a0;
+      background: #fff2e4;
+      display: grid;
+      place-items: center;
+    }
+
+    .day.open .caret { transform: rotate(180deg); }
+
+    .day-body {
+      display: none;
+      border-top: 1px solid transparent;
+    }
+
+    .day.open .day-body {
+      display: block;
+      border-top-color: var(--line);
+    }
+
+    .day-body ul {
+      margin: 0;
+      padding: 10px 16px 14px 30px;
+    }
+
+    .day-body li {
+      margin-bottom: 6px;
+      color: #2d3c47;
+      font-size: 0.92rem;
+    }
+
+    .timetable {
+      border-top: 1px dashed var(--line);
+      margin: 2px 12px 12px;
+      padding-top: 10px;
+    }
+
+    .timetable-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .timetable-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: auto;
+      flex-wrap: wrap;
+    }
+
+    .timetable-title {
+      margin: 0;
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .mini-save {
+      border: 1px solid #e5cdb4;
+      background: #fcf3e8;
+      border-radius: 8px;
+      padding: 6px 8px;
+      font: inherit;
+      font-size: 0.78rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .mode-switch {
+      display: flex;
+      gap: 6px;
+    }
+
+    .mode-btn {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 8px;
+      padding: 6px 8px;
+      font: inherit;
+      font-size: 0.78rem;
+      cursor: pointer;
+    }
+
+    .mode-btn.active {
+      background: #f8e9d9;
+      border-color: #e0b992;
+      color: #8a4b1a;
+      font-weight: 700;
+    }
+
+    .timetable-grid {
+      display: grid;
+      gap: 6px;
+    }
+
+    .time-row {
+      display: grid;
+      grid-template-columns: 62px 1fr;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .time-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #6a533f;
+      text-align: right;
+      padding-right: 4px;
+    }
+
+    .time-input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 7px 9px;
+      font: inherit;
+      font-size: 0.86rem;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .time-input:focus {
+      outline: 2px solid #e2b98a;
+      outline-offset: 1px;
+    }
+
+    .tt-view {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fffdf9;
+    }
+
+    .tt-view table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+
+    .tt-view th,
+    .tt-view td {
+      border-bottom: 1px solid #efe2d3;
+      padding: 7px 9px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .tt-view th {
+      width: 72px;
+      background: #fff4e7;
+      color: #6a533f;
+      font-weight: 700;
+    }
+
+    .tt-view tr:last-child th,
+    .tt-view tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .tt-empty {
+      padding: 10px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      text-align: center;
+    }
+
+    .tt-edit {
+      display: none;
+    }
+
+    .timetable.editing .tt-edit {
+      display: block;
+    }
+
+    .timetable.editing .tt-view {
+      display: none;
+    }
+
+    .foot {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.84rem;
+      padding: 8px;
+    }
+
+    @media (max-width: 980px) {
+      .planner { grid-template-columns: 1fr; }
+      .controls { position: static; }
+      .btn-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(1200px, 96vw);
+        margin: 14px auto 20px;
+        gap: 12px;
+      }
+
+      .hero-banner {
+        min-height: 200px;
+        padding: 20px;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.25rem, 6vw, 1.7rem);
+      }
+
+      .meta {
+        padding: 12px;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      figure img {
+        height: 110px;
+      }
+
+      .controls,
+      .itinerary {
+        border-radius: 12px;
+      }
+
+      .filter-wrap {
+        gap: 6px;
+      }
+
+      .chip {
+        font-size: 0.8rem;
+      }
+
+      .day-head {
+        padding: 10px;
+      }
+
+      .day-body ul {
+        padding: 8px 12px 12px 26px;
+      }
+
+      .time-row {
+        grid-template-columns: 56px 1fr;
+        gap: 6px;
+      }
+
+      .time-input {
+        min-height: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-banner">
+        <h1>Japan + South Korea Autumn Trip</h1>
+        <p>Oct 12-28, 2026 | Toronto -> Tokyo -> Kyoto/Osaka/Nara -> Seoul/Gyeongju/Busan -> Tokyo -> Toronto</p>
+      </div>
+      <div class="meta">
+        <article class="meta-card"><b>Duration</b>Japan 9 days (Oct 13-21), Korea 7 days (Oct 22-27).</article>
+        <article class="meta-card"><b>Weather</b>Japan 15-24 C, Korea 10-21 C with crisp autumn skies.</article>
+        <article class="meta-card"><b>Visa</b>Canadians are visa-free up to 90 days for both countries.</article>
+        <article class="meta-card"><b>Transport</b>JR Pass for long-distance Japan legs, T-Money card for Korea transit.</article>
+      </div>
+      <div class="flights">
+        <h2>Flights</h2>
+        <div class="flights-grid">
+          <article class="flight-card"><b>Outbound | AC 1 | YYZ -> HND</b>Mon, Oct 12, 1:05 PM (EST) -> Tue, Oct 13, 3:35 PM (JST) | 13h 25m</article>
+          <article class="flight-card"><b>Return | AC 2 | HND -> YYZ</b>Wed, Oct 28, 6:50 PM (JST) -> Wed, Oct 28, 6:05 PM (EST) | 12h 5m</article>
+        </div>
+      </div>
+    </section>
+
+    <section class="photos">
+      <h2>Route Highlights</h2>
+      <div class="photo-grid">
+        <figure>
+          <img src="./assets/images/tokyo.png" alt="Tokyo city scene" loading="lazy" />
+          <figcaption>Tokyo: neon districts, temples, and skyline views</figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/images/kyoto.png" alt="Kyoto temple landscape" loading="lazy" />
+          <figcaption>Kyoto: shrines, historic lanes, and bamboo groves</figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/images/seoul.png" alt="Seoul palace architecture" loading="lazy" />
+          <figcaption>Seoul: palaces, hanok villages, and city culture</figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/images/busan.png" alt="Busan coastline" loading="lazy" />
+          <figcaption>Busan: market streets and coastal morning walks</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="planner">
+      <aside class="controls">
+        <h3>Browse by Area</h3>
+        <div class="filter-wrap" id="filterWrap">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="japan">Japan</button>
+          <button class="chip" data-filter="korea">Korea</button>
+          <button class="chip" data-filter="tokyo">Tokyo</button>
+          <button class="chip" data-filter="kyoto">Kyoto</button>
+          <button class="chip" data-filter="osaka">Osaka</button>
+          <button class="chip" data-filter="nara">Nara</button>
+          <button class="chip" data-filter="seoul">Seoul</button>
+          <button class="chip" data-filter="gyeongju">Gyeongju</button>
+          <button class="chip" data-filter="busan">Busan</button>
+          <button class="chip" data-filter="transit">Transit</button>
+        </div>
+        <div class="btn-row">
+          <button class="action-btn" id="expandAll" type="button">Expand all</button>
+          <button class="action-btn" id="collapseAll" type="button">Collapse all</button>
+        </div>
+        <div class="count" id="visibleCount">Showing 16 days</div>
+        <div class="file-tools">
+          <button class="action-btn" id="connectJsonBtn" type="button">Connect JSON file</button>
+          <button class="action-btn" id="saveJsonBtn" type="button">Save to JSON file</button>
+          <button class="action-btn" id="exportJsonBtn" type="button">Export JSON download</button>
+          <button class="action-btn" id="importJsonBtn" type="button">Import JSON file</button>
+          <input id="importJsonInput" type="file" accept="application/json" hidden />
+          <div class="file-status" id="fileStatus">State: local browser storage (offline).</div>
+        </div>
+      </aside>
+
+      <section class="itinerary" id="itinerary">
+        <article class="day jp" data-tags="japan tokyo">
+          <button class="day-head" type="button" aria-expanded="false">
+            <div><span class="label">Japan</span><h4>Day 1 - Arrival in Tokyo</h4><div class="date">Oct 13</div></div><span class="caret">▾</span>
+          </button>
+          <div class="day-body"><ul><li>Flight: YYZ -> HND (AC 1), departs Mon, Oct 12 at 1:05 PM (EST), arrives Tue, Oct 13 at 3:35 PM (JST), 13h 25m.</li><li>Arrive Haneda (HND), clear entry formalities.</li><li>Transfer to central Tokyo via bus or monorail.</li><li>Evening in Shibuya: Crossing, Hachiko, Shibuya 109.</li><li>Peak crossing flow can reach 1,000-2,500 people every 2 minutes.</li></ul></div>
+        </article>
+
+        <article class="day jp" data-tags="japan tokyo asakusa ueno skytree">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Japan</span><h4>Day 2 - Asakusa, Ueno, Skytree</h4><div class="date">Oct 14</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Senso-ji and Nakamise-dori in Asakusa.</li><li>Skytree first deck opens at 10:00 (ticketed).</li><li>Ueno Park museums and autumn walks.</li></ul></div>
+        </article>
+
+        <article class="day jp" data-tags="japan tokyo harajuku shinjuku">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Japan</span><h4>Day 3 - Modern Tokyo</h4><div class="date">Oct 15</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Meiji Jingu at sunrise-sunset schedule.</li><li>Harajuku and Takeshita Street cafes/boutiques.</li><li>Shinjuku Gyoen, then Shinjuku evening lights.</li></ul></div>
+        </article>
+
+        <article class="day jp" data-tags="japan tokyo tsukiji ginza">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Japan</span><h4>Day 4 - Tsukiji and Imperial Tokyo</h4><div class="date">Oct 16</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Tsukiji Outer Market food run (morning-lunch window).</li><li>Hamarikyu Gardens and Sumida River cruise.</li><li>Ginza galleries and shopping district.</li></ul></div>
+        </article>
+
+        <article class="day jp" data-tags="japan tokyo kyoto transit gion fushimi-inari">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Japan</span><h4>Day 5 - Tokyo to Kyoto</h4><div class="date">Oct 17</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Shinkansen: Nozomi ~2h15, Hikari ~2h30 (JR Pass-friendly).</li><li>Afternoon in Gion and evening at Fushimi Inari (24h).</li></ul></div>
+        </article>
+
+        <article class="day jp" data-tags="japan kyoto arashiyama">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Japan</span><h4>Day 6 - Kyoto Temples and Arashiyama</h4><div class="date">Oct 18</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Kiyomizu-dera early opening, then Kinkaku-ji (9:00-17:00).</li><li>Arashiyama Bamboo Grove and nearby temple/garden options.</li></ul></div>
+        </article>
+
+        <article class="day jp" data-tags="japan kyoto nara transit">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Japan</span><h4>Day 7 - Nara Day Trip</h4><div class="date">Oct 19</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Kyoto to Nara via JR (~45 min).</li><li>Todai-ji Great Buddha Hall and Nara Park deer.</li><li>Return to Kyoto or shift to Osaka in evening.</li></ul></div>
+        </article>
+
+        <article class="day jp" data-tags="japan osaka dotonbori namba">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Japan</span><h4>Day 8 - Osaka Highlights</h4><div class="date">Oct 20</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Osaka Castle Museum and park walk.</li><li>Dotonbori + Namba street food (takoyaki, okonomiyaki).</li><li>Umeda Sky Building panorama.</li></ul></div>
+        </article>
+
+        <article class="day jp" data-tags="japan osaka transit">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Japan</span><h4>Day 9 - Osaka</h4><div class="date">Oct 21</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Morning at Osaka Aquarium Kaiyukan or Shinsaibashi shopping streets.</li><li>Afternoon in Shinsekai and Tsutenkaku area for local food.</li><li>Evening in Dotonbori and Namba for neon views and street snacks.</li></ul></div>
+        </article>
+
+        <article class="day kr" data-tags="korea seoul transit myeong-dong">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Korea</span><h4>Day 10 - Fly to Seoul, Myeong-dong</h4><div class="date">Oct 22</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Tokyo to Seoul Gimpo (~2h40), pick up T-Money card.</li><li>Evening in Myeong-dong and optional N Seoul Tower.</li></ul></div>
+        </article>
+
+        <article class="day kr" data-tags="korea seoul bukchon insadong">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Korea</span><h4>Day 11 - Palaces and Bukchon</h4><div class="date">Oct 23</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Gyeongbokgung (9:00-18:00 Sep-Oct, closed Tue).</li><li>Guard ceremony at 10:00 and 14:00.</li><li>Bukchon Hanok Village, then Insadong and Jogyesa.</li></ul></div>
+        </article>
+
+        <article class="day kr" data-tags="korea seoul dmz hongdae">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Korea</span><h4>Day 12 - DMZ Tour</h4><div class="date">Oct 24</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Pre-booked guided DMZ border-zone tour (passport required).</li><li>Common stops: Imjingak, Freedom Bridge, Dora Observatory.</li><li>Evening in Hongdae.</li></ul></div>
+        </article>
+
+        <article class="day kr" data-tags="korea seoul gyeongju transit">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Korea</span><h4>Day 13 - Seoul to Gyeongju</h4><div class="date">Oct 25</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>KTX to Singyeongju (~2h), then local transit.</li><li>Bulguksa and Seokguram Grotto, plus museum.</li><li>Overnight Gyeongju or continue to Busan.</li></ul></div>
+        </article>
+
+        <article class="day kr" data-tags="korea busan transit jagalchi gamcheon">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Korea</span><h4>Day 14 - Busan Markets and Culture</h4><div class="date">Oct 26</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Jagalchi seafood market, BIFF Square, Gukje Market.</li><li>Gamcheon Culture Village (maps available on site).</li></ul></div>
+        </article>
+
+        <article class="day mix" data-tags="korea busan japan tokyo transit">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Korea -> Japan</span><h4>Day 15 - Busan to Tokyo</h4><div class="date">Oct 27</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Morning at Haeundae/Gwangalli, then PUS -> NRT (~2h35).</li><li>Final Tokyo evening for shopping or exhibits.</li></ul></div>
+        </article>
+
+        <article class="day jp" data-tags="japan tokyo transit toronto">
+          <button class="day-head" type="button" aria-expanded="false"><div><span class="label">Japan</span><h4>Day 16 - Return to Toronto</h4><div class="date">Oct 28</div></div><span class="caret">▾</span></button>
+          <div class="day-body"><ul><li>Free morning in Tokyo.</li><li>Haneda transfer with at least 3h airport buffer.</li><li>Flight: HND -> YYZ (AC 2), departs Wed, Oct 28 at 6:50 PM (JST), arrives Wed, Oct 28 at 6:05 PM (EST), 12h 5m.</li></ul></div>
+        </article>
+      </section>
+    </section>
+
+    <footer class="foot">Standalone planner with filters, collapsible days, and visual destination references.</footer>
+  </main>
+
+  <script>
+    const days = Array.from(document.querySelectorAll('.day'));
+    const chips = Array.from(document.querySelectorAll('.chip'));
+    const visibleCount = document.getElementById('visibleCount');
+    const expandAllBtn = document.getElementById('expandAll');
+    const collapseAllBtn = document.getElementById('collapseAll');
+    const connectJsonBtn = document.getElementById('connectJsonBtn');
+    const saveJsonBtn = document.getElementById('saveJsonBtn');
+    const exportJsonBtn = document.getElementById('exportJsonBtn');
+    const importJsonBtn = document.getElementById('importJsonBtn');
+    const importJsonInput = document.getElementById('importJsonInput');
+    const fileStatus = document.getElementById('fileStatus');
+    const STATE_KEY = 'trip_timetable_state_v1';
+    const HOURS = Array.from({ length: 24 }, (_, i) => `${String(i).padStart(2, '0')}:00`);
+    let fileHandle = null;
+    let autosaveTimer = null;
+
+    function defaultState() {
+      return { version: 1, updatedAt: null, days: {} };
+    }
+
+    function normalizeState(raw) {
+      const base = defaultState();
+      if (!raw || typeof raw !== 'object') return base;
+      if (!raw.days || typeof raw.days !== 'object') raw.days = {};
+      return {
+        version: 1,
+        updatedAt: raw.updatedAt || null,
+        days: raw.days
+      };
+    }
+
+    function loadLocalState() {
+      try {
+        const raw = localStorage.getItem(STATE_KEY);
+        if (!raw) return defaultState();
+        return normalizeState(JSON.parse(raw));
+      } catch (_) {
+        return defaultState();
+      }
+    }
+
+    let plannerState = loadLocalState();
+
+    function saveLocalState() {
+      plannerState.updatedAt = new Date().toISOString();
+      localStorage.setItem(STATE_KEY, JSON.stringify(plannerState));
+      updateFileStatus();
+    }
+
+    function updateFileStatus(extra = '') {
+      const base = fileHandle
+        ? 'State: connected JSON file + local browser storage.'
+        : 'State: local browser storage (offline).';
+      fileStatus.textContent = extra ? `${base} ${extra}` : base;
+    }
+
+    function setOpen(card, open) {
+      card.classList.toggle('open', open);
+      card.querySelector('.day-head').setAttribute('aria-expanded', String(open));
+    }
+
+    function applyFilter(filter) {
+      chips.forEach((chip) => chip.classList.toggle('active', chip.dataset.filter === filter));
+      days.forEach((card) => {
+        const tags = card.dataset.tags.split(' ');
+        const show = filter === 'all' || tags.includes(filter);
+        card.classList.toggle('hidden', !show);
+      });
+      const count = days.filter((card) => !card.classList.contains('hidden')).length;
+      visibleCount.textContent = `Showing ${count} day${count === 1 ? '' : 's'}`;
+    }
+
+    chips.forEach((chip) => chip.addEventListener('click', () => applyFilter(chip.dataset.filter)));
+
+    days.forEach((card) => {
+      card.querySelector('.day-head').addEventListener('click', () => {
+        setOpen(card, !card.classList.contains('open'));
+      });
+    });
+
+    expandAllBtn.addEventListener('click', () => {
+      days.filter((card) => !card.classList.contains('hidden')).forEach((card) => setOpen(card, true));
+    });
+
+    collapseAllBtn.addEventListener('click', () => {
+      days.filter((card) => !card.classList.contains('hidden')).forEach((card) => setOpen(card, false));
+    });
+
+    function ensureDayEntry(dayId) {
+      if (!plannerState.days[dayId] || typeof plannerState.days[dayId] !== 'object') {
+        plannerState.days[dayId] = {};
+      }
+      return plannerState.days[dayId];
+    }
+
+    function createTimetable(card, dayId) {
+      const dayBody = card.querySelector('.day-body');
+      const wrap = document.createElement('section');
+      wrap.className = 'timetable';
+      wrap.innerHTML = `
+        <div class="timetable-head">
+          <h5 class="timetable-title">24-Hour Timetable</h5>
+          <div class="timetable-controls">
+            <div class="mode-switch">
+              <button type="button" class="mode-btn active" data-mode="view">View</button>
+              <button type="button" class="mode-btn" data-mode="edit">Edit</button>
+            </div>
+            <button type="button" class="mini-save">Save to JSON file</button>
+          </div>
+        </div>
+        <div class="tt-view">
+          <table>
+            <tbody class="tt-view-body"></tbody>
+          </table>
+          <div class="tt-empty">No timetable entries yet. Switch to Edit and add your plan.</div>
+        </div>
+        <div class="tt-edit">
+          <div class="timetable-grid"></div>
+        </div>
+      `;
+
+      const grid = wrap.querySelector('.timetable-grid');
+      HOURS.forEach((hour) => {
+        const row = document.createElement('div');
+        row.className = 'time-row';
+        row.innerHTML = `
+          <label class="time-label" for="${dayId}-${hour}">${hour}</label>
+          <input class="time-input" id="${dayId}-${hour}" type="text" data-day-id="${dayId}" data-hour="${hour}" placeholder="Add plan..." />
+        `;
+        grid.appendChild(row);
+      });
+
+      wrap.querySelector('.mini-save').addEventListener('click', async () => {
+        await saveToJsonFile();
+      });
+
+      wrap.querySelectorAll('.mode-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const mode = btn.dataset.mode;
+          const editMode = mode === 'edit';
+          wrap.classList.toggle('editing', editMode);
+          wrap.querySelectorAll('.mode-btn').forEach((b) => b.classList.toggle('active', b === btn));
+        });
+      });
+
+      dayBody.appendChild(wrap);
+    }
+
+    function renderDayView(dayId) {
+      const card = days.find((d) => d.dataset.dayId === dayId);
+      if (!card) return;
+      const wrap = card.querySelector('.timetable');
+      if (!wrap) return;
+      const body = wrap.querySelector('.tt-view-body');
+      const empty = wrap.querySelector('.tt-empty');
+      const dayData = plannerState.days?.[dayId] || {};
+      const esc = (s) => String(s).replace(/[&<>"']/g, (c) => (
+        { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+      ));
+      const rows = HOURS
+        .filter((hour) => dayData[hour] && String(dayData[hour]).trim())
+        .map((hour) => `<tr><th>${hour}</th><td>${esc(dayData[hour])}</td></tr>`)
+        .join('');
+      body.innerHTML = rows;
+      empty.style.display = rows ? 'none' : 'block';
+    }
+
+    function renderTimetables() {
+      days.forEach((card, i) => {
+        const dayId = `day-${i + 1}`;
+        card.dataset.dayId = dayId;
+        if (!card.querySelector('.timetable')) createTimetable(card, dayId);
+        ensureDayEntry(dayId);
+      });
+
+      const inputs = Array.from(document.querySelectorAll('.time-input'));
+      inputs.forEach((input) => {
+        const dayId = input.dataset.dayId;
+        const hour = input.dataset.hour;
+        const value = plannerState.days?.[dayId]?.[hour] || '';
+        input.value = value;
+      });
+      days.forEach((card) => renderDayView(card.dataset.dayId));
+    }
+
+    document.addEventListener('input', (event) => {
+      if (!event.target.classList.contains('time-input')) return;
+      const dayId = event.target.dataset.dayId;
+      const hour = event.target.dataset.hour;
+      const value = event.target.value.trim();
+      const dayEntry = ensureDayEntry(dayId);
+      if (value) {
+        dayEntry[hour] = value;
+      } else {
+        delete dayEntry[hour];
+      }
+      saveLocalState();
+      renderDayView(dayId);
+      scheduleAutosaveToJson();
+    });
+
+    async function connectJsonFile() {
+      if (!window.showSaveFilePicker) {
+        updateFileStatus('Direct file save not supported in this browser. Use Export JSON download.');
+        return;
+      }
+      try {
+        fileHandle = await window.showSaveFilePicker({
+          suggestedName: 'trip_timetable_state.json',
+          types: [{ description: 'JSON Files', accept: { 'application/json': ['.json'] } }]
+        });
+        updateFileStatus('JSON file connected.');
+      } catch (_) {
+        updateFileStatus('File connection canceled.');
+      }
+    }
+
+    async function saveToJsonFile() {
+      saveLocalState();
+      if (!fileHandle) {
+        await connectJsonFile();
+      }
+      if (!fileHandle) return;
+      try {
+        const writable = await fileHandle.createWritable();
+        await writable.write(JSON.stringify(plannerState, null, 2));
+        await writable.close();
+        updateFileStatus(`Saved to JSON at ${new Date().toLocaleTimeString()}.`);
+      } catch (_) {
+        updateFileStatus('Could not save to connected JSON file.');
+      }
+    }
+
+    function scheduleAutosaveToJson() {
+      if (!fileHandle) return;
+      clearTimeout(autosaveTimer);
+      autosaveTimer = setTimeout(async () => {
+        try {
+          const writable = await fileHandle.createWritable();
+          await writable.write(JSON.stringify(plannerState, null, 2));
+          await writable.close();
+          updateFileStatus(`Auto-saved at ${new Date().toLocaleTimeString()}.`);
+        } catch (_) {
+          updateFileStatus('Auto-save failed. Use Save to JSON file.');
+        }
+      }, 500);
+    }
+
+    function exportJsonDownload() {
+      saveLocalState();
+      const blob = new Blob([JSON.stringify(plannerState, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'trip_timetable_state.json';
+      a.click();
+      URL.revokeObjectURL(url);
+      updateFileStatus('JSON downloaded.');
+    }
+
+    function importJsonFile(file) {
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const parsed = JSON.parse(String(reader.result || '{}'));
+          plannerState = normalizeState(parsed);
+          saveLocalState();
+          renderTimetables();
+          updateFileStatus('JSON imported.');
+        } catch (_) {
+          updateFileStatus('Import failed: invalid JSON.');
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    connectJsonBtn.addEventListener('click', connectJsonFile);
+    saveJsonBtn.addEventListener('click', saveToJsonFile);
+    exportJsonBtn.addEventListener('click', exportJsonDownload);
+    importJsonBtn.addEventListener('click', () => importJsonInput.click());
+    importJsonInput.addEventListener('change', (event) => {
+      importJsonFile(event.target.files?.[0]);
+      event.target.value = '';
+    });
+
+    renderTimetables();
+    updateFileStatus();
+    applyFilter('all');
+  </script>
+</body>
+</html>
